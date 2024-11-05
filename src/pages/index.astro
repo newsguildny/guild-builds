@@ -1,13 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContentGrid from "../components/ContentGrid.astro";
+import ContentItem from "../components/ContentItem.astro";
 ---
 
 <Layout title="Guild Play">
 	<main>
-		<h1>This is some title text</h1>
-		Insert content here
+		<h2 class="section-title">Games for you to play while we are on strike</h2>
+		<ContentGrid>
+			<ContentItem name="Frogger" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Strikle" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Connections" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Stacker" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Memory Game" href="#" image="https://placehold.co/1600x900" />
+		</ContentGrid>
+		<h2 class="section-title">We heard you like cooking, here's our cookbook</h2>
+		<ContentGrid>
+			<ContentItem name="Frogger" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Strikle" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Connections" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Stacker" href="#" image="https://placehold.co/1600x900" />
+			<ContentItem name="Memory Game" href="#" image="https://placehold.co/1600x900" />
+		</ContentGrid>
 	</main>
 </Layout>
 
 <style>
+	.section-title {
+		text-transform: uppercase;
+	}
 </style>
