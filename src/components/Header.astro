@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-import Logo from "../assets/logo-round.svg"
+import Logo from "../components/LogoRound.astro"
 import { Icon } from 'astro-icon/components'
 ---
 
@@ -8,11 +8,11 @@ import { Icon } from 'astro-icon/components'
 	<nav class="nav">
 		<div class="logo-wrapper">
 		<a href="https://nytimesguild.org/" class="logo">
-			<Image class="logo-img"src={Logo} format="svg" alt="" loading="lazy" />
+			<Logo />
 			<span class="sr-only">Times Tech Guild</span>
 		</a>
 
-		<h1><a href="/" class="logo-text">Guild Builds</a></h1>
+		<h1><a href="https://nytimesguild.org/tech/guild-builds/" class="logo-text">Guild Builds</a></h1>
 	</div>
 		<a class="donate-link" href="https://www.gofundme.com/f/nyt-tech-strike-fund" target="_blank" rel="noopener">
 			<span class="donate-link-text">Donate</span>
@@ -33,6 +33,7 @@ import { Icon } from 'astro-icon/components'
 		border-bottom: 1px solid #B42F2F;
 	}
 	.logo-wrapper {
+    align-items: center;
 		display: flex;
 	}
 	.logo {
