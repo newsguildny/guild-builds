@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro";
+import Section from "../../components/Section.astro";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");
@@ -18,14 +19,41 @@ const { title, subtitle, ingredients } = entry.data
 
 <Layout title={title}>
   <Header />
-  <h1>{title}</h1>
-  {subtitle && <p>{subtitle}</p>}
-  <h2>Ingredients</h2>
-  <ul>
-    {ingredients.map((ingredient) => (
-      <li>{ingredient}</li>
-    ))}
+  <Section maxWidth="50rem">
+    <h1 class="crimson-pro">{title}</h1>
+    {subtitle && <p class="subtitle crimson-pro">"{subtitle}"</p>}
+    <h2 class="crimson-pro">Ingredients</h2>
+    <ul>
+      {ingredients.map((ingredient) => (
+        <li><p>{ingredient}</p></li>
+      ))}
   </ul>
-  <h2>Preparation</h2>
-  <Content />
+  <h2 class="crimson-pro">Preparation</h2>
+  <div class="flow">
+    <Content />
+  </div>
+</Section>
 </Layout>
+
+<style>
+  h1 {
+    border-bottom: 1px solid #B42F2F;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  h1::before {
+    color: #B42F2F;
+    content: "Name:" / " ";
+    font-size: 1rem;
+    position: absolute;
+    bottom: 80%;
+  }
+  .subtitle {
+    color: #B42F2F;
+    font-size: 1.75rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+</style>
