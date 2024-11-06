@@ -65,7 +65,7 @@ export const games: Game[] = [
     "live": false
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Hangman",
     "description": "Description 4",
     "image": "",
@@ -73,7 +73,7 @@ export const games: Game[] = [
     "live": false
   },
   {
-    "id": 7,
+    "id": 9,
     "name": "Decision Tree",
     "description": "Description 4",
     "image": "",
