@@ -26,11 +26,12 @@ const recipes = await getCollection("recipes");
       <SectionTitle>We heard you like cooking, here's our cookbook</SectionTitle>
       <ContentGrid>
         {
-          recipes.map((entry: { data: { title: string; }; slug: any; }) => (
+          recipes.map((entry) => (
             <ContentItem
               name={entry.data.title}
               href={`recipes/${entry.slug}`}
-              image="https://placehold.co/1600x900"
+              image={entry.data.img ? `recipes-thumbs/${entry.data.img}` : "https://placehold.co/1600x900"}
+              showName={false}
             />
           ))
         }
