@@ -119,6 +119,10 @@ const { title } = Astro.props;
 			"wdth" 87.5;
 	}
 
+	body {
+		background: #290E0D;
+	}
+
 	.crimson-pro {
 		font-family: "Crimson Pro", serif;
 		font-optical-sizing: auto;
@@ -135,4 +139,12 @@ const { title } = Astro.props;
 		white-space: nowrap;
 		border-width: 0;
 	}
+
+	a:focus-visible {
+		outline-color: #FF4040;
+		outline-width: 2px;
+		outline-offset: 2px;
+    outline-style: solid;
+	}
+
 </style>

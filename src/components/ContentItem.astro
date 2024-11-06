@@ -9,24 +9,29 @@ const { name, image, href } = Astro.props;
 ---
 
 <div class="item">
-    <a href={href}>
-        <img src={image} alt="" />
-        <h3>{name}</h3>
-    </a>
+  <a href={href}>
+    <h3>{name}</h3>
+    <img src={image} alt="" />
+  </a>
 </div>
 
 <style>
-    .item {
-        width: auto;
-    }
+  .item {
+    width: auto;
+  }
 
-    img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 16px;
-    }
+  .item a {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-    h3 {
-        line-height: 1.33;
-    }
+  img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 16px;
+  }
+
+  h3 {
+    line-height: 1.33;
+  }
 </style>
