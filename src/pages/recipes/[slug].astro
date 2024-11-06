@@ -13,10 +13,18 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { title, subtitle, ingredients } = entry.data
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={title}>
   <Header />
-  <h1>{entry.data.title}</h1>
+  <h1>{title}</h1>
+  {subtitle && <p>{subtitle}</p>}
+  <h2>Ingredients</h2>
+  <ul>
+    {ingredients.map((ingredient) => (
+      <li>{ingredient}</li>
+    ))}
+  </ul>
   <Content />
 </Layout>

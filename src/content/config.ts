@@ -4,6 +4,8 @@ const recipeCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(),
+    ingredients: z.array(z.string()),
   }),
 });
 
