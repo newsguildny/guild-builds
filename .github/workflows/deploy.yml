@@ -1,0 +1,43 @@
+name: deploy
+
+on:
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 20.x
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Export pages
+        run: npm run build
+
+      # Deploy public pages to GCS bucket fronted by Cloud CDN
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: centering-oxide-347014
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        with:
+          cli: gsutil
+          args: -m -h "Cache-Control:public,max-age=31536000" cp -z js,css,html,json -r "dist/*" gs://nytimes-tech-guild-builds
+
+      # Invalidate the CDN cache after updating the files in the bucket, so that
+      # clients always get the latest version of the site
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: centering-oxide-347014
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        with:
+          args: compute url-maps invalidate-cdn-cache nytimesguild-org-lb --async --path "'/tech/guild-builds/*'"
