@@ -5,6 +5,11 @@ import ContentItem from "../components/ContentItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
+import { games } from '../data/games';
+import { getCollection } from "astro:content";
+
+const liveGames = games.filter(game => game.live);
+const recipes = await getCollection("recipes");
 ---
 
 <Layout title="Guild Play">
@@ -12,14 +17,25 @@ import Header from '../components/Header.astro';
 	<main>
 		<Section dark>
 			<SectionTitle>Games for you to play while we are on strike</SectionTitle>
-			<ContentGrid>
-				<ContentItem name="Frogger" href="#" image="https://placehold.co/1600x900" />
-				<ContentItem name="Strikle" href="#" image="https://placehold.co/1600x900" />
-				<ContentItem name="Connections" href="#" image="https://placehold.co/1600x900" />
-				<ContentItem name="Stacker" href="#" image="https://placehold.co/1600x900" />
-				<ContentItem name="Memory Game" href="#" image="https://placehold.co/1600x900" />
-			</ContentGrid>
-		</Section>
-	</main>
+		  <ContentGrid>
+        {liveGames.map((game) => (
+          <ContentItem name={game.name} href={game.link} image={game.image ? `thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
+		  </ContentGrid>
+    </Section>
+    <Section>
+      <SectionTitle>We heard you like cooking, here's our cookbook</SectionTitle>
+      <ContentGrid>
+        {
+          recipes.map((entry: { data: { title: string; }; slug: any; }) => (
+            <ContentItem
+              name={entry.data.title}
+              href={`recipes/${entry.slug}`}
+              image="https://placehold.co/1600x900"
+            />
+          ))
+        }
+      </ContentGrid>
+    </Section>
+  </main>
 </Layout>
 	
