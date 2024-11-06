@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ContentGrid from "../components/ContentGrid.astro";
 import ContentItem from "../components/ContentItem.astro";
+import { games } from '../data/games';
+
+const liveGames = games.filter(game => game.live);
 ---
 
 <Layout title="Guild Play">
@@ -10,11 +13,8 @@ import ContentItem from "../components/ContentItem.astro";
 	<main>
 		<h2 class="section-title">Games for you to play while we are on strike</h2>
 		<ContentGrid>
-			<ContentItem name="Frogger" href="#" image="https://placehold.co/1600x900" />
-			<ContentItem name="Strikle" href="#" image="https://placehold.co/1600x900" />
-			<ContentItem name="Connections" href="#" image="https://placehold.co/1600x900" />
-			<ContentItem name="Stacker" href="#" image="https://placehold.co/1600x900" />
-			<ContentItem name="Memory Game" href="#" image="https://placehold.co/1600x900" />
+      {liveGames.map((game) => (
+        <ContentItem name={game.name} href={game.link} image={game.image ? `thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
 		</ContentGrid>
 		<h2 class="section-title">We heard you like cooking, here's our cookbook</h2>
 		<ContentGrid>
