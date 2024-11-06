@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import Logo from "../assets/logo-round.svg"
-import ExternalLink from "../assets/icons/external-link.svg"
+import { Icon } from 'astro-icon/components'
 ---
 
 <header class="link-card">
@@ -14,8 +14,8 @@ import ExternalLink from "../assets/icons/external-link.svg"
 		<h1 class="logo-text">Guild Builds</h1>
 	</div>
 		<a class="donate-link" href="https://www.gofundme.com/f/nyt-tech-strike-fund" target="_blank" rel="noopener">
-			Donate
-			<Image class="donate-link-img" src={ExternalLink} format="svg" alt="" height="16" />
+			<span class="donate-link-text">Donate</span>
+			<Icon name="external-link" class="donate-link-icon" />
 			<span class="sr-only"> opens a new window</span>
 		</a>
 	</nav>
@@ -50,7 +50,7 @@ import ExternalLink from "../assets/icons/external-link.svg"
 	.donate-link {
 		display: flex;
 		align-items: center;
-		color: #FFFFFF;
+		color: #FF4040;
 		font-family: "Open Sans", sans-serif;
 		font-weight: 600;
 		font-size: 1.25rem;
@@ -58,13 +58,22 @@ import ExternalLink from "../assets/icons/external-link.svg"
 		border: 2px solid #FF4040;
 		padding: 0.375rem 1rem;
 	}
-	.donate-link:hover {
-		text-decoration: underline;
+
+	.donate-link-text {
+		color: #FFFFFF;
 	}
-	.donate-link-img {
+
+	[data-icon='external-link'] {
 		margin-left: 16px;
-		height: 1.625rem;
-		width: 1.625rem;
+		height: 1rem;
+		width: 1rem;
+		fill: currentColor;
+	}
+
+	.donate-link:hover, .donate-link:focus-visible {
+		border-color: #FFFFFF;
+		outline: none;
+		color: #FFFFFF;
 	}
 
 	@media only screen and (min-width: 600px) {
