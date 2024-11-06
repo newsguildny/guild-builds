@@ -11,7 +11,8 @@ import { Icon } from 'astro-icon/components'
 			<Image class="logo-img"src={Logo} format="svg" alt="" loading="lazy" />
 			<span class="sr-only">Times Tech Guild</span>
 		</a>
-		<h1 class="logo-text">Guild Builds</h1>
+
+		<h1><a href="/" class="logo-text">Guild Builds</a></h1>
 	</div>
 		<a class="donate-link" href="https://www.gofundme.com/f/nyt-tech-strike-fund" target="_blank" rel="noopener">
 			<span class="donate-link-text">Donate</span>
@@ -42,13 +43,18 @@ import { Icon } from 'astro-icon/components'
 		width: 2.625rem;
 	}
 	.logo-text {
+		color: #FFFFFF;
 		font-family: "Crimson Pro", serif;
 		font-size: 2rem;
 		font-style: italic;
 		font-weight: 800;
-		color: #FFFFFF;
 		margin-left: 16px;
-	}
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .logo-text:hover {
+    color: #FF4040;
+  }
 	.donate-link {
 		display: flex;
 		align-items: center;
