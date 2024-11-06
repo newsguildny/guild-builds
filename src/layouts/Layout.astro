@@ -109,6 +109,10 @@ const { title } = Astro.props;
 		font-weight: 600;
 	}
 
+  p {
+    font-weight: 400;
+  }
+
 	html {
 		font-family: "Open Sans", sans-serif;
 		font-optical-sizing: auto;
@@ -116,6 +120,10 @@ const { title } = Astro.props;
 		font-variation-settings:
 			"wdth" 87.5;
 	}
+
+  .flow > * + * {
+    margin-top: 1rem;
+  }
 
 	.crimson-pro {
 		font-family: "Crimson Pro", serif;
