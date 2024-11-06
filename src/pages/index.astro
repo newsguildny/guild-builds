@@ -7,6 +7,7 @@ import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
 import { games } from '../data/games';
 import { getCollection } from "astro:content";
+import Disclaimer from '../components/Disclaimer.astro';
 
 const liveGames = games.filter(game => game.live);
 const recipes = await getCollection("recipes");
@@ -21,6 +22,7 @@ const recipes = await getCollection("recipes");
         {liveGames.map((game) => (
           <ContentItem name={game.name} href={game.link} image={game.image ? `thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
 		  </ContentGrid>
+      <Disclaimer>Games are built by union members and are not affiliated with the New York Times company. Please pardon any bugs. We are working hard to win a contract!</Disclaimer>
     </Section>
     <Section>
       <SectionTitle>We heard you like cooking, here's our cookbook</SectionTitle>
