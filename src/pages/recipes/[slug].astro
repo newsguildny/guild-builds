@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../components/Header.astro";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");
@@ -13,5 +15,8 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<h1>{entry.data.title}</h1>
-<Content />
+<Layout title={entry.data.title}>
+  <Header />
+  <h1>{entry.data.title}</h1>
+  <Content />
+</Layout>
