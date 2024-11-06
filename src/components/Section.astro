@@ -1,13 +1,16 @@
 ---
 interface Props {
     dark?: boolean;
+    maxWidth?: string;
 }
 
-const { dark = false } = Astro.props;
+const { dark = false, maxWidth = "90rem" } = Astro.props;
 ---
 
 <section class={dark ? 'dark' : ''}>
-    <slot />
+    <div class="wrapper" style={`--maxW: ${maxWidth}`}>
+      <slot />
+    </div>
 </section>
 
 <style>
@@ -37,5 +40,9 @@ const { dark = false } = Astro.props;
 
     section.dark :global(a):hover {
         color: white;
+    }
+    .wrapper {
+        max-width: var(--maxW, 90rem);
+        margin: 0 auto;
     }
 </style>

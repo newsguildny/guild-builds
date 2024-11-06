@@ -13,6 +13,7 @@ ingredients: [
   2 tsp grated lemon peel,
   2 tbsp lemon juice,
 ]
+img: "tuna-surprise.jpg"
 ---
 
 Preheat oven to 400.
