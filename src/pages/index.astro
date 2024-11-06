@@ -5,6 +5,9 @@ import ContentItem from "../components/ContentItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
+import { getCollection } from "astro:content";
+
+const recipes = await getCollection("recipes");
 ---
 
 <Layout title="Guild Play">
@@ -19,6 +22,20 @@ import Header from '../components/Header.astro';
 				<ContentItem name="Stacker" href="#" image="https://placehold.co/1600x900" />
 				<ContentItem name="Memory Game" href="#" image="https://placehold.co/1600x900" />
 			</ContentGrid>
-		</Section>
-	</main>
+    </Section>
+    <Section dark>
+      <h2 class="section-title">We heard you like cooking, here's our cookbook</h2>
+      <ContentGrid>
+        {
+          recipes.map((entry) => (
+            <ContentItem
+              name={entry.data.title}
+              href={`recipes/${entry.slug}`}
+              image="https://placehold.co/1600x900"
+            />
+          ))
+        }
+      </ContentGrid>
+    </Section>
+  </main>
 </Layout>
