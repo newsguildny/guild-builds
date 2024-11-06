@@ -2,16 +2,17 @@
 interface Props {
     name: string;
     image: string;
-    href: string
+    href: string;
+    showName?: boolean;
 }
 
-const { name, image, href } = Astro.props;
+const { name, image, href, showName = true } = Astro.props;
 ---
 
 <div class="item">
   <a href={href}>
-    <h3>{name}</h3>
-    <img src={image} alt="" />
+    {showName && <h3>{name}</h3>}
+    <img src={image} alt={showName ? '' : name } />
   </a>
 </div>
 

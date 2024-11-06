@@ -6,6 +6,7 @@ const recipeCollection = defineCollection({
     title: z.string(),
     subtitle: z.string().optional(),
     ingredients: z.array(z.string()),
+    img: z.string(),
   }),
 });
 
