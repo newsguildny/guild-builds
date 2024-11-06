@@ -13,7 +13,7 @@ export const games: Game[] = [
     "name": "Frogger 8th Ave",
     "description": "Description 1",
     "image": "frogger.jpg",
-    "link": "#",
+    "link": "https://tech-guild-scabber.netlify.app/",
     "live": true
   },
   {
@@ -22,7 +22,7 @@ export const games: Game[] = [
     "description": "Description 4",
     "image": "scabbys-fair-contract.jpg",
     "link": "#",
-    "live": true
+    "live": false
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@ export const games: Game[] = [
     "name": "Word Search",
     "description": "Description 4",
     "image": "word-search.jpg",
-    "link": "#",
+    "link": "https://steven-nunez.github.io/techguild-word-search-game/",
     "live": true
   },
   {
@@ -53,7 +53,7 @@ export const games: Game[] = [
     "name": "Strikle",
     "description": "Description 4",
     "image": "strikle.jpg",
-    "link": "#",
+    "link": "https://strikle.org/",
     "live": true
   },
   {
