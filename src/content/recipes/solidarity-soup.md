@@ -12,6 +12,7 @@ ingredients: [
   lots of ground pepper,
   'handful of baby spinach, diced zucchini, frozen peas, mushrooms whatever tender veg you have laying around',
 ]
+img: "soup.jpg"
 ---
 
 Sauté garlic ginger onions, add spices and toast a bit more until fragrant but before it gets burnt

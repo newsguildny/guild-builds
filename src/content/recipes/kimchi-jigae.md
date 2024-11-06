@@ -11,6 +11,7 @@ ingredients: [
   1 tbsp gochujang (Korean red chili paste),
   2-3 cups water,
 ]
+img: "kimchi.jpg"
 ---
 
 In a large pot, over med-high heat, cook pork belly if using.
