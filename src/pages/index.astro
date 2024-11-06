@@ -6,8 +6,10 @@ import SectionTitle from "../components/SectionTitle.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
 import { games } from '../data/games';
+import { getCollection } from "astro:content";
 
 const liveGames = games.filter(game => game.live);
+const recipes = await getCollection("recipes");
 ---
 
 <Layout title="Guild Play">
@@ -19,6 +21,20 @@ const liveGames = games.filter(game => game.live);
         {liveGames.map((game) => (
           <ContentItem name={game.name} href={game.link} image={game.image ? `thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
 		  </ContentGrid>
-		</Section>
-	</main>
+    </Section>
+    <Section>
+      <SectionTitle>We heard you like cooking, here's our cookbook</SectionTitle>
+      <ContentGrid>
+        {
+          recipes.map((entry: { data: { title: string; }; slug: any; }) => (
+            <ContentItem
+              name={entry.data.title}
+              href={`recipes/${entry.slug}`}
+              image="https://placehold.co/1600x900"
+            />
+          ))
+        }
+      </ContentGrid>
+    </Section>
+  </main>
 </Layout>
