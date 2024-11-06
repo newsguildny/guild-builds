@@ -1,0 +1,41 @@
+---
+interface Props {
+    dark?: boolean;
+}
+
+const { dark = false } = Astro.props;
+---
+
+<section class={dark ? 'dark' : ''}>
+    <slot />
+</section>
+
+<style>
+    section {
+        color: black;
+        padding: 32px;
+    }
+
+    section :global(a) {
+        color: black;
+        text-decoration: none;
+    }
+
+    section :global(a):hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    section.dark {
+        background-color: #290e0d;
+        color: white;
+    }
+
+    section.dark :global(a) {
+        color: white;
+    }
+
+    section.dark :global(a):hover {
+        color: white;
+    }
+</style>
