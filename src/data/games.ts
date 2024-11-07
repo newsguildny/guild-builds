@@ -21,8 +21,8 @@ export const games: Game[] = [
     "name": "Scabby’s Fair Contract Builder",
     "description": "Description 4",
     "image": "scabbys-fair-contract.jpg",
-    "link": "#",
-    "live": false
+    "link": "https://grantyi.github.io/nyt-union-stacker/",
+    "live": true
   },
   {
     "id": 3,
