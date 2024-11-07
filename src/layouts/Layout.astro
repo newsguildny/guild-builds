@@ -1,4 +1,6 @@
 ---
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+
 interface Props {
 	title: string;
 }
@@ -9,6 +11,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+    <GoogleAnalytics measurementId="G-FTSPMS5XMM" />
 		<meta charset="UTF-8" />
 		<meta name="description" content="A series of games made by NY Tech Guild members" />
 		<meta name="viewport" content="width=device-width" />
