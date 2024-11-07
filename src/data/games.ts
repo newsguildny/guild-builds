@@ -13,7 +13,7 @@ export const games: Game[] = [
     "name": "Frogger 8th Ave",
     "description": "Description 1",
     "image": "frogger.jpg",
-    "link": "https://tech-guild-scabber.netlify.app/",
+    "link": "./frogger",
     "live": true
   },
   {
