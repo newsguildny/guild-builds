@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+
+
+---
+
+<footer>
+  <h3 class="footer-heading">Contact Us</h3>
+  <a class="footer-contact" href="mailto:nyttech@nyguild.org">
+    <Icon name="email"/> nyttech@nyguild.org
+  </a>
+  <a class="footer-contact" href="https://x.com/nytguildtech">
+    <Icon name="twitter" /> NYTGuildTech
+  </a>
+</footer>
+
+<style>
+  footer {
+    height: 400px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Crimson Pro", serif;
+    color: #676767;
+    font-weight: 500;
+  }
+  .footer-heading {
+    font-size: 2.5rem;
+  }
+  .footer-contact {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: inherit
+  }
+</style>
