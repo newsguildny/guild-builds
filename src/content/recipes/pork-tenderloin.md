@@ -18,6 +18,6 @@ Lay down enough foil to completely cover the tenderloin - you might need two lay
 
 Mix all the ingredients except the tenderloin - give it a taste - you might want to add more of something but it should be salty, sweet and spicy.
 
-Spread about ⅓ of the spice mixture on the foil so it is around the same size as the tenderloin.  Then place the tenderloin on top of it. Spread the rest of the spice mixture on the top and sides of the tenderloin. Wrap the tenderloin completely in the foil. Let sit at least 15-30 minutes - longer is OK but don’t go past an hour.
+Spread about ⅓ of the spice mixture on the foil so it is around the same size as the tenderloin. Then place the tenderloin on top of it. Spread the rest of the spice mixture on the top and sides of the tenderloin. Wrap the tenderloin completely in the foil. Let sit at least 15-30 minutes - longer is OK but don’t go past an hour.
 
 Heat the grill to medium-high, add the foil wrapped tenderloin, give it 5 minutes on one side, turn it over, give it 5 more minutes, then turn down the heat to medium-low. Give it 10 minutes, turn it over, give it 10 more minutes. Test it with a meat thermometer in the center - when it gets to 145 F you are done. Remove it from the grill and let it rest for 10 minutes. Cut it against the grain to serve.

@@ -1,5 +1,5 @@
 ---
-title: "\"We’ve got beef with management\" Stuffed Mushrooms"
+title: "“We’ve got beef with management” Stuffed Mushrooms"
 ingredients: [
   2-3 cartons of white button mushrooms,
   '1 pack of raw & seasoned sausage (e.g. bob evans spicy or sweet italian). Can be pork or beef patties or sausage links. I prefer the patties because then you don’t have to squeeze the meat out from the sausage casing',

@@ -1,5 +1,5 @@
 ---
-title: "Kimchi \"Just Cause \" Jigae"
+title: "Kimchi “Just Cause” Jigae"
 ingredients: [
   '1 cup fermented kimchi, chopped in bite size pieces',
   '1 block (10oz) firm tofu, in ½ inch pieces',
