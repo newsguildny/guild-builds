@@ -79,5 +79,13 @@ export const games: Game[] = [
     "image": "",
     "link": "#",
     "live": false
+  },
+  {
+    "id": 10,
+    "name": "Trivia and Jokes",
+    "description": "Description 4",
+    "image": "trivia-and-jokes.jpg",
+    "link": "https://nyt-tech-guild-trivia-and-jokes.vercel.app/",
+    "live": true
   }
 ]
