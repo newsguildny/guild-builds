@@ -5,6 +5,7 @@ import ContentItem from "../components/ContentItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { games } from '../data/games';
 import { getCollection } from "astro:content";
 import Disclaimer from '../components/Disclaimer.astro';
@@ -40,4 +41,5 @@ const recipes = await getCollection("recipes");
       </ContentGrid>
     </Section>
   </main>
+  <Footer />
 </Layout>
