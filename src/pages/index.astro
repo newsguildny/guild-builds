@@ -21,7 +21,7 @@ const recipes = await getCollection("recipes");
 			<SectionTitle>Games for you to play while we are on strike</SectionTitle>
 		  <ContentGrid>
         {liveGames.map((game) => (
-          <ContentItem name={game.name} href={game.link} image={game.image ? `thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
+          <ContentItem name={game.name} href={game.link} image={game.image ? `${import.meta.env.BASE_URL}/thumbs/${game.image}` : "https://placehold.co/1600x900"} /> ))}
 		  </ContentGrid>
       <Disclaimer>Games are built by union members and supporters and are not affiliated with the New York Times company. Please pardon any bugs. We are working hard to win a contract!</Disclaimer>
     </Section>
@@ -32,8 +32,8 @@ const recipes = await getCollection("recipes");
           recipes.map((entry) => (
             <ContentItem
               name={entry.data.title}
-              href={`recipes/${entry.slug}`}
-              image={entry.data.img ? `recipes-thumbs/${entry.data.img}` : "https://placehold.co/1600x900"}
+              href={`${import.meta.env.BASE_URL}/recipes/${entry.slug}`}
+              image={entry.data.img ? `${import.meta.env.BASE_URL}/recipes-thumbs/${entry.data.img}` : "https://placehold.co/1600x900"}
               showName={false}
             />
           ))
