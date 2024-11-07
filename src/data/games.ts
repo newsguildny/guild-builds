@@ -58,11 +58,11 @@ export const games: Game[] = [
   },
   {
     "id": 7,
-    "name": "Crossword",
+    "name": "Guild Adventure",
     "description": "Description 4",
-    "image": "",
-    "link": "#",
-    "live": false
+    "image": "adventure.png",
+    "link": "./adventure.html",
+    "live": true
   },
   {
     "id": 8,
