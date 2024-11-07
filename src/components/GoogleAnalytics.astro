@@ -12,13 +12,10 @@ const measurementId = props.measurementId
   id='ga-init'
   is:inline
 >
-  const measurementId = document
-    .getElementById('ga-init')
-    .getAttribute('data-ga-measurement-id')
   window.dataLayer = window.dataLayer || []
   function gtag() {
     dataLayer.push(arguments) // eslint-disable-line
   }
   gtag('js', new Date())
-  gtag('config', measurementId)
+  gtag('config', 'G-FTSPMS5XMM')
 </script>
