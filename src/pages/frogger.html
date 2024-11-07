@@ -1,0 +1,64 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NY Frogger</title>
+    <link rel="stylesheet" href="/frogger/css/style.css">
+  </head>
+
+  <body>
+    <div id="instructions" class="modal">
+      <h1>NYT Striker</h1>
+      <p>
+      Help Scabby get strikers across 8th Avenue to the picket line.
+    </p>
+      <div class="image-container">
+        <img src="/frogger/images/scabby.png" alt="scabby avatar" height="50px"/>
+      </div>
+      <p>In addition to vehicles, avoid executives who are trying to intimidate strikers away from the picket line.</p>
+      <div class="image-container">
+        <img src="/frogger/images/cab.png" alt="taxi cab" height="50px"/>
+        <img src="/frogger/images/exec2.png" alt="executive" height="50px"/>
+      </div>
+      <p>The game speed increases with each striker you get to the picket line.</p>
+      <div class="button-container">
+        <button class="button primary-button" onclick="closeModal()">Start!</button>
+      </div>
+
+    </div>
+    <div class="modal" id="game-over">
+      <p>Nice job!</p>
+      <p>Since we have called a strike, we are asking our public supporters to boycott NYT Games as well as the NYT
+      Cooking
+      App. </p>
+      <p>The general guidance is “don't cross the picket line - break your streak with us in solidarity.”</p>
+      <p>Please also
+      consider donating to <a target="_blank" rel="noreferrer noopener"
+        href="https://www.gofundme.com/f/nyt-tech-strike-fund">our strike
+        solidarity fund</a>.</p>
+      <div class="button-container">
+        <button class="button primary-button" onclick="closeModal()">Play Again</button>
+        <button onclick="hideCallToAction()" class="button link-button">Don't show this
+        message again</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="canvas3"></canvas>
+    <canvas id="canvas4"></canvas>
+    <canvas id="canvas5"></canvas>
+  </div>
+
+  <script src="/frogger/javascript/setup.js"></script>
+  <script src="/frogger/javascript/frogger.js"></script>
+  <script src="/frogger/javascript/particles.js"></script>
+  <script src="/frogger/javascript/obstacles.js"></script>
+  <script src="/frogger/javascript/utilities.js"></script>
+  <script src="/frogger/javascript/instructions.js"></script>
+
+</body>
+
+</html>
