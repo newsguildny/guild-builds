@@ -8,5 +8,5 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   site: "https://nytimesguild.org",
   integrations: [icon(), partytown()],
-  base: "/tech/guild-builds",
+  base: process.env.NODE_ENV === "production" ? "/tech/guild-builds" : "/",
 });
