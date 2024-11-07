@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro";
 import Section from "../../components/Section.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");
@@ -18,21 +19,26 @@ const { title, subtitle, ingredients } = entry.data
 ---
 
 <Layout title={title}>
-  <Header />
-  <Section maxWidth="50rem">
-    <h1 class="crimson-pro">{title}</h1>
-    {subtitle && <p class="subtitle crimson-pro">"{subtitle}"</p>}
-    <h2 class="crimson-pro">Ingredients</h2>
-    <ul>
-      {ingredients.map((ingredient) => (
-        <li><p>{ingredient}</p></li>
-      ))}
-  </ul>
-  <h2 class="crimson-pro">Preparation</h2>
-  <div class="flow">
-    <Content />
+  <div class="wrapper">
+    <Header />
+    <div class="grow">
+      <Section maxWidth="50rem">
+        <h1 class="crimson-pro">{title}</h1>
+        {subtitle && <p class="subtitle crimson-pro">"{subtitle}"</p>}
+        <h2 class="crimson-pro">Ingredients</h2>
+        <ul>
+          {ingredients.map((ingredient) => (
+            <li><p>{ingredient}</p></li>
+          ))}
+        </ul>
+        <h2 class="crimson-pro">Preparation</h2>
+        <div class="flow">
+          <Content />
+        </div>
+      </Section>
+    </div>
+    <Footer />
   </div>
-</Section>
 </Layout>
 
 <style>
@@ -55,5 +61,13 @@ const { title, subtitle, ingredients } = entry.data
     font-size: 1.75rem;
     font-style: italic;
     margin-bottom: 0.5rem;
+  }
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .grow {
+    flex-grow: 1;
   }
 </style>
