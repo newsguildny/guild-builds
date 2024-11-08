@@ -96,4 +96,12 @@ export const games: Game[] = [
     link: 'https://mini.toomuchdog.com/',
     live: true,
   },
+  {
+    id: 13,
+    name: 'Wide Guild Brick Breaker',
+    description: 'Description 4',
+    image: 'wide-guild-brick-breaker.jpg',
+    link: 'https://sameermore412.github.io/TechUnionBrickBreaker/BrickBreaker.html',
+    live: true,
+  },
 ]
