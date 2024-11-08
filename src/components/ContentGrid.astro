@@ -2,14 +2,15 @@
 
 ---
 
-<div class="grid">
+<div class="content-grid">
     <slot />
 </div>
 
-<style>
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(20.3125rem, 100%), 1fr));
-        gap: 24px;
-    }
+<style is:global>
+.content-grid {
+  --flow-space: 1.75em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20.3125rem, 100%), 1fr));
+  gap: 24px;
+}
 </style>
