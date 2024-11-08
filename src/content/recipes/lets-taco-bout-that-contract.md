@@ -23,7 +23,7 @@ ingredients: [
   '1 tsp sugar',
   'Olive oil for the pan'
 ]
-img: "lets-taco-about-that-contract.jpg"
+img: "lets-taco-bout-that-contract.jpg"
 ---
 
 Quick pickle the shallot by combining vinegar, half the shallot, sugar, a pinch of salt, and 1 tablespoon of water in a small bowl. Stir and set aside for at least 15 minutes, or until ready to serve.
