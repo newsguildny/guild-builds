@@ -1,6 +1,6 @@
 ---
 title: "Let's Taco Bout That Contract"
-subtitle: "Seasoned with solidarity"
+subtitle: "Seasoned with solidarity!"
 ingredients: [
   '2 tsp ground cumin',
   '2 tsp paprika',
