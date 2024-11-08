@@ -69,7 +69,7 @@ export const games: Game[] = [
     "name": "STRIKE man",
     "description": "Description 4",
     "image": "strike-man.jpg",
-    "link": "https://nyttechguild.slack.com/archives/C07UUFQ49CL/p1731020229751599?thread_ts=1730909711.331259&cid=C07UUFQ49CL",
+    "link": "https://www.harrynelken.com/techguild-strikeman",
     "live": true
   },
   {
