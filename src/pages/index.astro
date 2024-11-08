@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ContentGrid from "../components/ContentGrid.astro";
 import ContentItem from "../components/ContentItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import Chants from "../components/Chants.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -40,6 +41,12 @@ const recipes = await getCollection("recipes");
         }
       </ContentGrid>
     </Section>
+
+    <Section>
+      <SectionTitle>Grab a bullhorn and picket sign, it's time to chant!</SectionTitle>
+      <Chants></Chants>
+    </Section>
+
   </main>
   <Footer />
 </Layout>
