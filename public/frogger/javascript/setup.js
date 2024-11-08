@@ -32,7 +32,7 @@ var hiddenCallToAction = false;
 
 function createImage(filename) {
   const image = new Image();
-  image.src = `https://nytimesguild.org/tech/guild-builds/frogger/images/${filename}.png`;
+  image.src = `/tech/guild-builds/frogger/images/${filename}.png`;
   return image;
 }
 

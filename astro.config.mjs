@@ -6,6 +6,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nytimesguild.org/tech/guild-builds",
-  integrations: [icon(), partytown()]
+  site: "https://nytimesguild.org",
+  integrations: [icon(), partytown()],
+  base: process.env.CONTEXT === "branch-deploy" ? "/" : "/tech/guild-builds",
 });

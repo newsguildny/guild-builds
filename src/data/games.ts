@@ -13,7 +13,7 @@ export const games: Game[] = [
     "name": "Frogger 8th Ave",
     "description": "Description 1",
     "image": "frogger.jpg",
-    "link": "./frogger",
+    "link": `${import.meta.env.BASE_URL}/frogger`,
     "live": true
   },
   {
