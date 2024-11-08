@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContentGrid from "../components/ContentGrid.astro";
+import Switcher from "../components/Switcher.astro";
 import ContentItem from "../components/ContentItem.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Section from "../components/Section.astro";
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { games } from '../data/games';
 import { getCollection } from "astro:content";
 import Disclaimer from '../components/Disclaimer.astro';
@@ -13,7 +15,7 @@ const liveGames = games.filter(game => game.live);
 const recipes = await getCollection("recipes");
 ---
 
-<Layout title="Guild Play">
+<Layout title="Guild Builds">
 	<Header />
 	<main>
 		<Section dark>
@@ -25,7 +27,7 @@ const recipes = await getCollection("recipes");
       <Disclaimer>Games are built by union members and supporters and are not affiliated with the New York Times company. Please pardon any bugs. We are working hard to win a contract!</Disclaimer>
     </Section>
     <Section>
-      <SectionTitle>We heard you like cooking, here's our cookbook</SectionTitle>
+      <SectionTitle>We heard you like cooking. Here’s our cookbook.</SectionTitle>
       <ContentGrid>
         {
           recipes.map((entry) => (
@@ -39,5 +41,36 @@ const recipes = await getCollection("recipes");
         }
       </ContentGrid>
     </Section>
+    <Section>
+      <SectionTitle>Grab a bullhorn and picket sign, it's time to chant!</SectionTitle>
+      <p>There are a lot of chants on the lines, so we built a way to keep track of them.</p>
+
+      <a class="button" href="https://strike-chants.vercel.app/">Strike Chants</a>
+      <Switcher>
+        <ContentItem name="Strike Chants" image="thumbs/chant1.png" showName={false} />
+        <ContentItem name="Strike Chants" image="thumbs/chant2.png" showName={false} />
+        <ContentItem name="Strike Chants" image="thumbs/chant3.png" showName={false} />
+		  </Switcher>
+    </Section>
   </main>
+  <Footer />
 </Layout>
+
+<style>
+a.button {
+  align-items: center;
+  border: 2px solid #FF4040;
+  color: #FF4040;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 0.375rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+a.button:hover {
+  border-color: #B42F2F;
+  color: #B42F2F;
+}
+</style>

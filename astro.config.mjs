@@ -1,9 +1,11 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import icon from 'astro-icon';
+import icon from "astro-icon";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [icon()]
+  site: "https://nytimesguild.org/tech/guild-builds",
+  integrations: [icon(), partytown()]
 });

@@ -2,7 +2,7 @@
 interface Props {
     name: string;
     image: string;
-    href: string;
+    href?: string;
     showName?: boolean;
 }
 
@@ -10,10 +10,11 @@ const { name, image, href, showName = true } = Astro.props;
 ---
 
 <div class="item">
-  <a href={href}>
+  {href && <a href={href}>
     {showName && <h3>{name}</h3>}
-    <img src={image} alt={showName ? '' : name } />
-  </a>
+    <img src={image} alt={showName ? '' : name } loading="lazy" />
+  </a>}
+  {!href && <img src={image} alt={name} loading="lazy" />}
 </div>
 
 <style>
@@ -26,10 +27,18 @@ const { name, image, href, showName = true } = Astro.props;
     flex-direction: column-reverse;
   }
 
+  .item a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff4040;
+  }
+
   img {
     width: 100%;
     height: auto;
-    padding-bottom: 16px;
+  }
+
+  h3 + img {
+    padding-bottom: 8px;
   }
 
   h3 {

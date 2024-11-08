@@ -1,0 +1,21 @@
+---
+
+---
+
+<div class="switcher">
+  <slot />
+</div>
+
+<style is:global>
+.switcher {
+  --flow-space: 1.75em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(( 46.125rem - 100%) * 999); // when the container is smaller than 46.125rem, the items will stack
+}
+</style>

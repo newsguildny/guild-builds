@@ -1,4 +1,6 @@
 ---
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+
 interface Props {
 	title: string;
 }
@@ -9,13 +11,14 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+    <GoogleAnalytics />
 		<meta charset="UTF-8" />
 		<meta name="description" content="A series of games made by NY Tech Guild members" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wdth,wght@0,87.5,300..800;1,87.5,300..800&display=swap" rel="stylesheet">		<title>{title}</title>
-		<link rel="icon" type="image/svg+xml" href="/GuildColor.svg" />
+		<link rel="icon" type="image/svg+xml" href="https://nytimesguild.org/tech/guild-builds/GuildColor.svg" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -121,10 +124,6 @@ const { title } = Astro.props;
 			"wdth" 87.5;
 	}
 
-  .flow > * + * {
-    margin-top: 1rem;
-  }
-
 	.crimson-pro {
 		font-family: "Crimson Pro", serif;
 		font-optical-sizing: auto;
@@ -149,4 +148,24 @@ const { title } = Astro.props;
     outline-style: solid;
 	}
 
+  .flow > * + * {
+    margin-top: var(--flow-space, 1.25em);
+  }
+  .flow > :where(h1, h2, h3) + * {
+    --flow-space: 0.5em;
+  }
+  .cluster {
+    align-items: var(--cluster-vertical-alignment, center);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter, var(--space-s-m, 0.75rem));
+    justify-content: var(--cluster-horizontal-alignment, flex-start)
+  }
+  .repel {
+    align-items: var(--repel-vertical-alignment, center);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter, var(--space-s-m, 0.75rem));
+    justify-content: var(--repel-horizontal-alignment, space-between)
+  }
 </style>
