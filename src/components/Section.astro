@@ -8,7 +8,7 @@ const { dark = false, maxWidth = "90rem" } = Astro.props;
 ---
 
 <section class={dark ? 'dark' : ''}>
-    <div class="wrapper" style={`--maxW: ${maxWidth}`}>
+    <div class="wrapper flow" style={`--maxW: ${maxWidth}`}>
       <slot />
     </div>
 </section>
@@ -43,6 +43,7 @@ const { dark = false, maxWidth = "90rem" } = Astro.props;
     }
     .wrapper {
         max-width: var(--maxW, 90rem);
+        padding-block: 16px;
         margin: 0 auto;
     }
 </style>
