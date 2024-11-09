@@ -101,7 +101,7 @@ export const games: Game[] = [
     name: 'Guild Adventure',
     description: 'Description 4',
     image: 'adventure.png',
-    link: './adventure.html',
+    link: './adventure',
     live: true
   },
   {
