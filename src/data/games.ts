@@ -45,7 +45,7 @@ export const games: Game[] = [
     name: 'Connections: Strike Edition',
     description: 'Description 3',
     image: 'connected.jpg',
-    link: 'https://connections.swellgarfo.com/game/-OBBRQVXgemrT_0YFpPk',
+    link: 'https://connections.swellgarfo.com/game/-OBGN31SaJDuhk6Gl7Sz',
     live: true,
   },
   {
@@ -69,7 +69,7 @@ export const games: Game[] = [
     name: 'STRIKEMAN',
     description: 'Description 4',
     image: 'strike-man.jpg',
-    link: 'hnelken.github.io/techguild-strikeman',
+    link: 'https://hnelken.github.io/techguild-strikeman/',
     live: true,
   },
   {
@@ -95,6 +95,14 @@ export const games: Game[] = [
     image: 'mini-crossword.jpg',
     link: 'https://mini.toomuchdog.com/',
     live: true,
+  },
+  {
+    id: 12,
+    name: 'Guild Adventure',
+    description: 'Description 4',
+    image: 'adventure.png',
+    link: './adventure.html',
+    live: true
   },
   {
     id: 13,
