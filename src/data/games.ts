@@ -66,10 +66,10 @@ export const games: Game[] = [
   },
   {
     id: 8,
-    name: 'STRIKE man',
+    name: 'STRIKEMAN',
     description: 'Description 4',
     image: 'strike-man.jpg',
-    link: 'https://www.harrynelken.com/techguild-strikeman',
+    link: 'hnelken.github.io/techguild-strikeman',
     live: true,
   },
   {
