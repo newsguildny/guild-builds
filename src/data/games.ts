@@ -96,4 +96,12 @@ export const games: Game[] = [
     link: 'https://mini.toomuchdog.com/',
     live: true,
   },
+  {
+    id: 12,
+    name: 'Guild Adventure',
+    description: 'Description 4',
+    image: 'adventure.png',
+    link: './adventure.html',
+    live: true
+  }
 ]
