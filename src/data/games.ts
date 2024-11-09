@@ -103,5 +103,13 @@ export const games: Game[] = [
     image: 'adventure.png',
     link: './adventure.html',
     live: true
-  }
+  },
+  {
+    id: 13,
+    name: 'Wide Guild Brick Breaker',
+    description: 'Description 4',
+    image: 'wide-guild-brick-breaker.jpg',
+    link: 'https://sameermore412.github.io/TechUnionBrickBreaker/BrickBreaker.html',
+    live: true,
+  },
 ]
