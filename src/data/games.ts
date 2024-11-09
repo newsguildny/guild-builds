@@ -45,7 +45,7 @@ export const games: Game[] = [
     name: 'Connections: Strike Edition',
     description: 'Description 3',
     image: 'connected.jpg',
-    link: 'https://connections.swellgarfo.com/game/-OBBRQVXgemrT_0YFpPk',
+    link: 'https://connections.swellgarfo.com/game/-OBGN31SaJDuhk6Gl7Sz',
     live: true,
   },
   {
